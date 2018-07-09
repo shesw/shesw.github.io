@@ -1,10 +1,19 @@
-## 微信小程序朋友圈分享图片生成方案实现
+title: 小程序分享图片生成方案实现
+date: 2018-07-07
+author: 生忘
+subtitle: 一套名为Painter的工具， 为开发者提供一种简单实用的“绘制”图片的解决思路，让开发者可以自由地生成自己想要的图片文件。
+tags: [小程序, 组件]
+
+categories: 小程序
+---
+
+![](https://user-gold-cdn.xitu.io/2018/7/9/1647d4f9b1068841?w=1000&h=613&f=jpeg&s=70128)
 
 在小程序界里，生成图片分享到朋友圈这个功能，是如此得光芒耀眼，以至于各个小程序都趋之若鹜地前来跪倒在她的石榴裙下。不幸的是，微信爸爸并没有提供给我们很好很便捷的相关工具；恰恰相反，屏幕截屏的功能被残忍丢进历史的垃圾桶，只留下一个Canvas组件以及围绕在其周围的深渊巨坑们。
 
 所以我们准备了一套名为Painter的工具， 为开发者提供一种简单实用的“绘制”图片的解决思路，让开发者可以自由地生成自己想要的图片文件。
 
-github传送门：[https://github.com/Kujiale-Mobile/Painter](https://github.com/Kujiale-Mobile/Painter)
+github传送门：https://github.com/Kujiale-Mobile/Painter
 
 如果直接使用canvas进行绘图，那绝对是很酸爽的一次体验，除了失控的代码，还有无数的天坑。先来列举一下canvas 中踩过的坑以及我们的解决（或绕过）的方法。
 
@@ -299,4 +308,4 @@ bind:imgErr="onImgErr"
 
 painter是酷家乐前端在小程序的实际开发中自制的一套工具，目前在朋友圈分享、皮肤模板替换等方面都在使用，觉得用起来喜忧参半。开源出来大家分享。如果它能帮助到任何一个人，我们都非常开心；我们也非常欢迎并感谢提issure或pr，来告诉我们一些我们自己没有能想到的东西，或者帮助解决Painter 中的大大小小的坑：
 
-再一次传送门：[https://github.com/Kujiale-Mobile/Painter](https://github.com/Kujiale-Mobile/Painter)
+再一次传送门地址：https://github.com/Kujiale-Mobile/Painter
