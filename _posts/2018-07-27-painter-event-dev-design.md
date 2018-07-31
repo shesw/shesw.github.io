@@ -62,19 +62,8 @@ tags: [小程序]
    监听canvas组件的所有事件，根据事件发生的坐标，决定分配给那一个组件。
 
    分配机制：
-   ```flow
-   st=>start: Start
-   e=>end: End
-   op1=>operation: 获取整个canvas的点击事件
-   op2=>operation: 根据点击区域过滤出拥有该事件的元素(view)，并排出它们消耗该事件的顺序，依次放入序列。
-   op3=>operation: 从序列中取出第一个元素，消耗该元素的对应事件
-   con1=>condition: 当前元素是否拦截当前事件？
-   op4=>operation: 消除序列中所有元素
-   op5=>operation: 从序列中移除当前元素
-   st->op1->op2->op3->con1
-   con1(yes)->op4->e
-   con1(no)->op5->op3
-   ```
+
+   ![](http://sinacloud.net/music-store/markdownPic/Screen%20Shot%202018-07-31%20at%205.13.34%20PM.png?KID=sina,2o3w9tlWumQRMwg2TQqi&Expires=1576048485&ssig=td58Xxd1H%2B)
 
 2. 支持事件的冒泡与拦截
 
@@ -86,19 +75,7 @@ tags: [小程序]
 
    在上述流程图中，添加环节：
 
-   ```flow
-   st=>start: start
-   e=>end: e
-   op1=>operation: 获取整个canvas的点击事件
-   op3=>operation: 消耗全图点击事件
-   con=>condition: 是否拦截
-   op2=>operation: 根据点击区域过滤出拥有该事件的元素(view)，并排出它们消耗该事件的顺序，依次放入序列
-   st->op1->op3->con
-   con(yes)->e
-   con(no)->op2
-   ```
-
-   
+   ![](http://sinacloud.net/music-store/markdownPic/Screen%20Shot%202018-07-31%20at%205.14.47%20PM.png?KID=sina,2o3w9tlWumQRMwg2TQqi&Expires=1576048485&ssig=dHkq%2FvKcCi)
 
 4. 动态改变一个元素（view）的位置以及其它状态。
    对于某一个元素位置的动态控制能力。这一点是我认为最复杂的一点，在canvas上控制元素的移动和状态，就意味着不断地刷新重绘这个元素。可行的思路有一下两点：

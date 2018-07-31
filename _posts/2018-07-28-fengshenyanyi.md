@@ -34,19 +34,7 @@
 
 18. 商容进内庭见驾路线：
 
-    ```flow
-    st=>start: start
-    e=>end: 寿仙宫
-    op1=>operation: 进九间大殿
-    op2=>operation: 龙德殿
-    op3=>operation: 显庆殿
-    op4=>operation: 嘉善殿
-    op5=>operation: 分宫楼
-    op6=>operation: 见奉御官
-    st->op1->op2->op3->op4->op5->op6->e
-    ```
-
-    
+    ![](http://sinacloud.net/music-store/markdownPic/Screen%20Shot%202018-07-31%20at%205.11.30%20PM.png?KID=sina,2o3w9tlWumQRMwg2TQqi&Expires=1576048485&ssig=yLV7cgjREF)
 
 19. 天子失政，吾等上本内廷，言妖气累贯于宫中，灾星立变于天下。首相传达，有犯天颜。君赐臣死，不敢违旨。梅先生，功名二字化作灰尘，数载丹心竟成冰冷。
 
