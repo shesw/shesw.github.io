@@ -8,7 +8,7 @@ subtitle: painter对元素的管理机制设计
 
 tags: [小程序]
 
-## categories: 【小程序，canvas】
+## categories: 【小程序，canvas，dev design】
 
 
 #### 获取事件
