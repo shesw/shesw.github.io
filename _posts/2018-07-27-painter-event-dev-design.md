@@ -8,7 +8,7 @@ subtitle: painter的点击触发事件设计
 
 tags: [小程序]
 
-## categories: 【小程序，canvas】
+## categories: 【小程序，canvas，dev design】
 
 
 
