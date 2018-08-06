@@ -60,3 +60,43 @@ kooHandler用于处理和分发事件。其生命周期为：
 6. 值得注意的是，在这里全屏事件的处理方式，与普通view保持一致。在实际操作中，将整个palette的json作为一个大view。
 7. 在实际操作中，execPool可以不必放入完整的view，而是将这些view中符合条件的方法提取出来放入即可。
 
+#### KooHandler数据预处理
+
+目标：
+
+1. 分离出不同点击事件的事件池，加快事件搜索的速度。
+
+   在KooHandler下创建以下几个数组：
+
+   * tapPool
+   * touchstartPool
+   * touchmovePool
+   * touchendPool
+   * longpressPool
+
+   存放拥有对应事件的元素。
+
+2. 分离出静态元素和动态元素
+
+   * staticPool
+   * dynamicPool
+
+   动态元素在methods属性下，拥有movable:true，并且制定其运动规则，可以设置动画或随手指移动：
+
+   ```js
+   {
+       methods:{
+           movable: true,
+           animation: transform scale rotate fingerMove cunstom,
+           ...
+       }
+   }
+   ```
+
+3. 将分离出的静态和动态元素信息传递给pen，由pen来实现绘制策略：
+
+   * 先绘制静态元素，保存，再绘制动态元素，同时实现刷新显示的策略
+   * 分辨出每一次运动，哪些是相对静态，哪些是相对动态，以便实现最好的性能。
+
+
+
