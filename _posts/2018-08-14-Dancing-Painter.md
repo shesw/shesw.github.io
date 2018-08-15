@@ -10,49 +10,10 @@ tags: [小程序，canvas]
 
 ## categories: 【小程序，canvas，分享图，交互】
 
-距离首次开源Painter库已经有一段时间了，这期间获益于各路道友的帮助和提点，Painter进行了几波更新（[原项目地址：](https://github.com/Kujiale-Mobile/Painter)， [使用参考](https://juejin.im/post/5b40b158e51d4518f543c7b0))：
-
-##### 新增特性：
-
-1. 增加align属性，可以使任意元素可以实现左中右对齐。
-2. 加入文字换行的能力。对一段文字设置width或者maxLines，都有可能触发文字的换行。
-3. 添加文字的一些属性：fontWeight, textDecoration, textStyel(fill, stroke), maxLines, lineHeight
-4. 图片mode属性，实现图片裁剪、缩放，默认为aspectFill
-5. 图片不设置width, heighti属性，使用默认宽高
-6. left, right, top, bottom对负数的支持
-
-##### 修复问题：
-
-1. 某些机型上切边会出现黑线。
-2. 安卓机型上圆角无法显示
-3. 使用文件前检查文件是否正常
-4. 二维码大小显示异常
-
-此外，也更新了[demo](https://github.com/Kujiale-Mobile/Painter)，并切探索了一下Painter用在其它框架中的可行性。
-
-新功能一览：
-
-![](http://sinacloud.net/music-store/markdownPic/ts1534220572855Screen%20Shot%202018-08-14%20at%2012.22.19%20PM.png?KID=sina%2C2o3w9tlWumQRMwg2TQqi&ssig=gDHsB48dzJ&Expires=1535084616 )
-
-
-
-
-
-这里有一篇[wiki](https://github.com/Kujiale-Mobile/Painter/wiki/mpvue-%E6%8E%A5%E5%85%A5%E6%96%B9%E5%BC%8F)简单讲述了怎样在mpvue中使用Painter。
-
-！！！请注意！！！：mpve的实现并不能完全贴近原生vue的开发，例如mpvue在更新某一个页面元素的值的时候，会同时把所有data中存在的元素都更新一遍。
-
-这就造成了[这个问题](https://github.com/Kujiale-Mobile/Painter/issues/24)：Painter绘制完成后，会触发onImgOK函数，传出图片的url。这时将该url传入某image的src中去，同时就会触发Painter的template的再赋值，从而导致无限重绘。
-
-##### demo地址：[https://github.com/Kujiale-Mobile/Painter](https://github.com/Kujiale-Mobile/Painter)
-
-##### 使用参考： [https://juejin.im/post/5b40b158e51d4518f543c7b0](https://juejin.im/post/5b40b158e51d4518f543c7b0)
-
-------------------
 
 #### 交互版Painter -- Dancing-Painter
 
-Painter是伴随着[酷咖名片小程序](http://help.kujiale.com/hc/kb/article/1163606/)的需求应运而生的。接下去为了更好地服务于实际应用，我们研发人员自作主张地认为Painter还需要一些交互的功能。这一版的Painter拥有以下几个新特性：
+Painter是伴随着[酷咖名片小程序](http://help.kujiale.com/hc/kb/article/1163606/)的需求应运而生的，项目上线后我们研发人员自作主张地认为Painter还需要一些交互的功能，这样可以简化有关canvas的复杂的页面布局。这一版的Painter拥有以下几个新特性：
 
 1. 能够给任意元素添加点击事件，包括tap, longpress, touchstart, touchmove, touchend 五种。
 2. 能够实现元素的拖拽。
@@ -242,4 +203,50 @@ Painter的元素绘制是以json的形式给出的，其交互行为和拖拽效
 
 
 
+
+
+
+
+
+------------------
+
+距离首次开源Painter库已经有一段时间了，这期间获益于各路道友的帮助和提点，Painter进行了几波更新（[原项目地址：](https://github.com/Kujiale-Mobile/Painter)， [使用参考](https://juejin.im/post/5b40b158e51d4518f543c7b0))：
+
+##### 新增特性：
+
+1. 增加align属性，可以使任意元素可以实现左中右对齐。
+2. 加入文字换行的能力。对一段文字设置width或者maxLines，都有可能触发文字的换行。
+3. 添加文字的一些属性：fontWeight, textDecoration, textStyel(fill, stroke), maxLines, lineHeight
+4. 图片mode属性，实现图片裁剪、缩放，默认为aspectFill
+5. 图片不设置width, heighti属性，使用默认宽高
+6. left, right, top, bottom对负数的支持
+
+##### 修复问题：
+
+1. 某些机型上切边会出现黑线。
+2. 安卓机型上圆角无法显示
+3. 使用文件前检查文件是否正常
+4. 二维码大小显示异常
+
+此外，也更新了[demo](https://github.com/Kujiale-Mobile/Painter)，并切探索了一下Painter用在其它框架中的可行性。
+
+新功能一览：
+
+![](http://sinacloud.net/music-store/markdownPic/ts1534220572855Screen%20Shot%202018-08-14%20at%2012.22.19%20PM.png?KID=sina%2C2o3w9tlWumQRMwg2TQqi&ssig=gDHsB48dzJ&Expires=1535084616 )
+
+
+
+
+
+这里有一篇[wiki](https://github.com/Kujiale-Mobile/Painter/wiki/mpvue-%E6%8E%A5%E5%85%A5%E6%96%B9%E5%BC%8F)简单讲述了怎样在mpvue中使用Painter。
+
+！！！请注意！！！：mpve的实现并不能完全贴近原生vue的开发，例如mpvue在更新某一个页面元素的值的时候，会同时把所有data中存在的元素都更新一遍。
+
+这就造成了[这个问题](https://github.com/Kujiale-Mobile/Painter/issues/24)：Painter绘制完成后，会触发onImgOK函数，传出图片的url。这时将该url传入某image的src中去，同时就会触发Painter的template的再赋值，从而导致无限重绘。
+
+##### demo地址：[https://github.com/Kujiale-Mobile/Painter](https://github.com/Kujiale-Mobile/Painter)
+
+##### 使用参考： [https://juejin.im/post/5b40b158e51d4518f543c7b0](https://juejin.im/post/5b40b158e51d4518f543c7b0)
+
+------------------
 
